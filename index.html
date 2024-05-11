@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <h1>Sandyakala</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Gallery</a>
+                    <div class="dropdown-content">
+                        <a href="galleryfoto.html">foto</a>
+                        <a href="galleryvideo.html">video</a>
+                        <a href="gallerymusic.html">music</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p>Hallo</p>
+        <div id="greeting"></div>
+        <div id="clock"></div>
+        <button onclick="showAlert()">KLIK AING</button>
+
+        
+    </main>
+    <footer>
+        <p>UCP 1 PDW_20220140096</p>
+    </footer>
+
+    <script>
+        function showAlert() {
+            alert("makasih ya");
+        }
+
+        // Fungsi untuk mendapatkan salam berdasarkan waktu
+        function getGreeting() {
+            var hour = new Date().getHours();
+            var greeting = "";
+            if (hour >= 0 && hour < 12) {
+                greeting = "Selamat pagi!";
+            } else if (hour >= 12 && hour < 18) {
+                greeting = "Selamat siang!";
+            } else {
+                greeting = "Selamat malam!";
+            }
+            return greeting;
+        }
+
+        // Fungsi untuk menampilkan waktu secara real-time
+        function displayClock() {
+            var now = new Date();
+            var hour = now.getHours();
+            var minute = now.getMinutes();
+            var second = now.getSeconds();
+            var timeString = hour + ":" + (minute < 10 ? "0" : "") + minute + ":" + (second < 10 ? "0" : "") + second;
+            document.getElementById("clock").innerHTML = "Waktu saat ini: " + timeString;
+        }
+
+        // Fungsi untuk memperbarui salam dan waktu setiap detik
+        function updateTime() {
+            document.getElementById("greeting").innerHTML = getGreeting();
+            displayClock();
+            setInterval(displayClock, 1000); // Memperbarui setiap detik
+        }
+
+        // Memanggil fungsi updateTime saat halaman dimuat
+        window.onload = updateTime;
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

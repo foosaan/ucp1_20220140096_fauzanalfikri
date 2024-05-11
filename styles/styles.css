@@ -1,0 +1,107 @@
+/* Reset CSS */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Ganti font dengan yang lebih nyaman */
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Ganti warna latar belakang dengan yang lebih lembut */
+    min-height: 100vh; /* Menggunakan viewport height agar footer tetap di bawah */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold; /* Beri teks yang lebih tebal */
+}
+
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333; /* Ganti warna teks agar kontras dengan latar belakang */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center; /* Pusatkan konten */
+}
+
+/* Button */
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold; /* Beri teks yang lebih tebal */
+    transition: background-color 0.3s; /* Efek transisi warna saat dihover */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Greeting and Clock */
+#greeting {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#clock {
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto; /* Footer akan ditempatkan di bawah */
+}
